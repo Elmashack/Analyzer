@@ -1,9 +1,9 @@
 print('hello')
- print('hello')
-  print('hello')
     print('hello')
-      print('hello')
-        print('hello')
+    print('hello')
+ print('hello')
+     print('hello')
+   print('hello')
 
 print('hello')
 print('hello');
@@ -17,7 +17,7 @@ print('hello')  # ;
 class Analyzer:
 
     def __init__(self) -> None:
-        self.file_path = input()
+          self.file_path = input()
         self.x_line = 0
         with open(self.file_path, "r", encoding='utf-8') as file:
             for line in file:
