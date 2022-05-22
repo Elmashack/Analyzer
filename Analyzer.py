@@ -135,6 +135,9 @@ def mutable_arg(node):  # S012 Default arg is mutable
         
 
 def analyzer(file_path: str):
+    if file_path[-3:] != ".py":
+        print("Please enter a Python file")
+        return
     count_blanks = 0
     with open(file_path, "r") as file:
         code_list = file.read().splitlines()
@@ -175,7 +178,7 @@ if __name__ == "__main__":
     file_path = []
     if not os.access(argv[1], os.F_OK):
         print("There is no such file or directory")
-    if os.path.isdir(argv[1]):
+    elif os.path.isdir(argv[1]):
         for root, dirs, files in os.walk(argv[1], topdown=False):
             for name in files:
                 file_path.append(os.path.join(root, name))
